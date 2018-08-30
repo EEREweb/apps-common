@@ -47,3 +47,12 @@ if (!String.prototype.repeat) {
 	Array.prototype.move = function(from, to) {
 		this.splice(to, 0, this.splice(from, 1)[0]);
 	};
+	
+	//check if JavaScript Object is empty
+	function isObjectEmpty(obj) {
+		for(var key in obj) {
+			if(obj.hasOwnProperty(key))
+				return false;
+		}
+		return true;
+	}
